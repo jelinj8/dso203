@@ -1,4 +1,5 @@
-
+This is my attempt to make this project buildable with available tools. Help is welcome.
+====
 Wildcat Community Edition revision(W6.5)
 
 Based on DSO203 GCC v1.7 APP (Revisions and notes for previous versions below)

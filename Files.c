@@ -1177,7 +1177,7 @@ u8 Load_Param(u8 FileNum)
     Meter[i].Track    =(*p++ >>8);       // load measurements and the measurement object
 	  }
 
- if(BootLoad==0){
+ if(BootLoad){
   for(i=0; i<10; i++){
     Ka1[i] = *p;                         // restore the original channel A low error correction coefficient
     Kb1[i] =(*p++ >>8);                  // restore the original B-channel low error correction coefficient
