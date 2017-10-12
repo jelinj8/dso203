@@ -1,7 +1,7 @@
 How to compile on a Windows Machine:
 
 1. Download link https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2008q1-126-arm-none-eabi-i686-mingw32.tar.bz2
-- I used 7zip to unzip the bz2, then must use Winrar (7zip made some .exe 0 size) to unzip the tar to C:\arm-2008q1\
+- I used Winrar 5.21 (warning 7zip make some .exe 0 size) to unzip the .bz2 to C:\arm-2008q1\
 
 2. Add C:\arm-2008q1\bin to system path
 
