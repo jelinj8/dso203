@@ -17,7 +17,7 @@ Download DS203 source and extract
 
 Lauch Command Prompt Window
 -
-- in Command Prompt CD into dso203-master directory with all the source files.
+- in Command Prompt CD into dso203-master directory with all the source files from above step
 
 Test the compiler
 -
