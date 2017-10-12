@@ -62,3 +62,11 @@ You should find the compiled firmware file app1.hex (423,697 bytes)
 Optional for hw2.81+ ONLY 
 -
 -To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
+
+Credits and contributors:
+======================
+- jakub.jelinek
+- Wildcat
+- Seeed-Studio
+- Marco Sinatti (marcosin)
+- Gabriel Valky (gabonator1)
