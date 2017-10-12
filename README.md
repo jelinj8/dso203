@@ -70,3 +70,9 @@ Credits and contributors:
 - Seeed-Studio
 - Marco Sinatti (marcosin)
 - Gabriel Valky (gabonator1)
+- pmoss69
+- JackTheVendicator
+- bobtidey 
+- JPA 
+- Jerson 
+- original authors minidso
