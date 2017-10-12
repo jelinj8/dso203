@@ -7,7 +7,7 @@ How to compile on a Windows Machine:
 
 3. Next click [Clone or download], then [Download zip]
 - Unzip the dso203-master.zip 
-- Open a new Command Prompt and change into dso203-master directory with all the source files.
+- Open a new Command Prompt and CD into dso203-master directory with all the source files.
 
 4. Test the compiler, type: arm-none-eabi-gcc.exe -v
 - output:
