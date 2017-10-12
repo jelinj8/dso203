@@ -5,7 +5,7 @@ How to compile on a Windows Machine:
 
 2. Add C:\arm-2008q1\bin to system path
 
-3. Next click [Clone or download], then [Download zip]
+3. Next click the green [Clone or download] button on github, then [Download zip]
 - Unzip the dso203-master.zip 
 - Open a new Command Prompt and CD into dso203-master directory with all the source files.
 
