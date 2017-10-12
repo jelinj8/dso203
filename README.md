@@ -15,7 +15,7 @@ Download DS203 source and extract
 - click the green [Clone or download] button on github, then [Download zip]
 - Extract the dso203-master.zip somewhere
 
-Launch Command Prompt Window
+Open Command Prompt Window
 -
 - in Command Prompt CD into dso203-master directory with all the source files from above step
 
