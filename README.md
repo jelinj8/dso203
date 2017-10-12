@@ -1,3 +1,6 @@
+Wildcat V6.5 for hw2.81+ (not compatible with older devices)
+=
+
 How to compile on a Windows Machine
 ===================================
 
@@ -55,3 +58,7 @@ Lets build the binary
 You should find the compiled firmware file app1.hex (423,697 bytes)
 -
 - Put your DS203 into DFU mode (press and hold >|| button and power on) and copy the app1.hex to drive.
+
+Optional for hw2.81+ ONLY 
+-
+-To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
