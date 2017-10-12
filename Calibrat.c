@@ -36,7 +36,7 @@ void Calibrat(u8 Channel)
   u16 Ma2[10], Mb2[10], i, j;
   s16 TmpA, TmpB;
   u8  Range, k = 0, m, Step, Tmp, V_min, V_max;               
-  s8  Offset;
+  s8  Offset = 0;
   char n[10];
   u16 BatLevel[2]={0,0};
   char PPM_Str[5];
