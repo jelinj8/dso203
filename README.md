@@ -1,15 +1,30 @@
-How to compile on a Windows Machine:
+Wildcat V6.5 for hw2.81+ (not compatible with older devices)
+=
 
-1. Download link https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2008q1-126-arm-none-eabi-i686-mingw32.tar.bz2
-- I used 7zip to unzip the bz2, then must use Winrar (7zip made some .exe 0 size) to unzip the tar to C:\arm-2008q1\
+How to compile on a Windows Machine
+===================================
 
-2. Add C:\arm-2008q1\bin to system path
+Download the standalone compiler and extract
+-
+- https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2008q1-126-arm-none-eabi-i686-mingw32.tar.bz2
+- I used Winrar 5.21 to extract the .bz2 to C:\arm-2008q1\  (warning 7zip make some .exe 0 size)
 
-3. Next click the green [Clone or download] button on github, then [Download zip]
-- Unzip the dso203-master.zip 
-- Open a new Command Prompt and CD into dso203-master directory with all the source files.
+Add PATH to system 
+-
+- C:\arm-2008q1\bin
 
-4. Test the compiler, type: arm-none-eabi-gcc.exe -v
+Download DS203 source and extract 
+-
+- click the green [Clone or download] button on github, then [Download zip]
+- Extract the dso203-master.zip somewhere
+
+Open Command Prompt Window
+-
+- in Command Prompt CD into dso203-master directory with all the source files from above step
+
+Test the compiler
+-
+- type: arm-none-eabi-gcc.exe -v
 - output:
 - Using built-in specs.
 - Target: arm-none-eabi
@@ -20,7 +35,9 @@ How to compile on a Windows Machine:
 - Thread model: single
 - gcc version 4.2.3 (Sourcery G++ Lite 2008q1-126)
 
-5. Lets build by typing: cs-make
+Lets build the binary
+-
+- type: cs-make
 - output:
 - arm-none-eabi-gcc -Wall -O2 -I. -Iinc  -Werror -mcpu=cortex-m3 -mthumb -fno-common -fzero-initialized-in-bss -msoft-float -MD -I FWLib/inc -c -o Calibrat.o Calibrat.c
 - arm-none-eabi-gcc -Wall -O2 -I. -Iinc  -Werror -mcpu=cortex-m3 -mthumb -fno-common -fzero-initialized-in-bss -msoft-float -MD -I FWLib/inc -c -o Draw.o Draw.c
@@ -38,5 +55,24 @@ How to compile on a Windows Machine:
 - arm-none-eabi-objcopy -O ihex app1.elf app1.hex
 - rm app1.elf
 
-6. You should find the compiled firmware file app1.hex (423,697 bytes)
+You should find the compiled firmware file app1.hex (423,697 bytes)
+-
 - Put your DS203 into DFU mode (press and hold >|| button and power on) and copy the app1.hex to drive.
+
+Optional for hw2.81+ ONLY 
+-
+-To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
+
+Credits and contributors:
+======================
+- jakub.jelinek
+- Wildcat
+- Seeed-Studio
+- Marco Sinatti (marcosin)
+- Gabriel Valky (gabonator1)
+- pmoss69
+- JackTheVendicator
+- bobtidey 
+- JPA 
+- Jerson 
+- original authors minidso
