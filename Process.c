@@ -1120,8 +1120,12 @@ void Process(void)
   else                                d_Max = _4_posi + 20;
 
   if((ChartLogic())&&(FrameMode==0)&&(ScrollFlag>0)){  
-    if((JumpCnt>(380+_X_posi.Value))){_X_posi.Value=(JumpCnt-380);if((Current!=FILE)&&(NotificationTimer==0))
-      Update_View_Area();ScrollFlag=1;}         
+    if((JumpCnt>(380+_X_posi.Value))){
+      _X_posi.Value=(JumpCnt-380);
+      if((Current!=FILE)&&(NotificationTimer==0))
+        Update_View_Area();
+      ScrollFlag=1;
+    }         
     if((ScrollFlag==1)&&(JumpCnt<=380)){_X_posi.Value=0;if(Current!=FILE)Update_View_Area();}         
     XposRef=GetXposRef(_X_posi.Value);
   }
