@@ -1,4 +1,5 @@
-_estack = ORIGIN(ram)+LENGTH(ram)-0x4000;
+/* stack pointer should point to the address ABOVE the available RAM */
+_estack = ORIGIN(ram)+LENGTH(ram);
 /*_estack = ORIGIN(ram)+LENGTH(ram)-0x2000;*/
 
 /* Linker script for Olimex STM32-H103 eval board.
