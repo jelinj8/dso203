@@ -220,7 +220,7 @@ int main(void)
   G_Attr = (G_attr*)__Get(GLOBAL);
   T_Attr = (T_attr*)__Get(TRIGGER);
 
-  if(memcmp((u8*)__Get(13),"2.81",4)==0)HardwareVersion=1; else HardwareVersion=0;         //HDWVER
+  if(memcmp((u8*)__Get(13),"2.81",4)>=0)HardwareVersion=1; else HardwareVersion=0;         //HDWVER
 
   InitiateCalData();
   LoadBaseBuffers();				

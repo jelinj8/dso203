@@ -656,13 +656,15 @@ void fix_fft(s32 fr[], s32 fi[], short size)		// m = number of bits of the FFT s
 				// H/W divide and single cycle multiply):
 
                                 tr=(wr*(fr[j]>>shift))>>(14-shift);	//shift extends dynamic range for log display	
-                                if(tr&1)tr++; tr>>=1;
+                                if(tr&1)tr++;
+                                tr>>=1;
                                 c=(wi*(fi[j]>>shift))>>(14-shift);
                                 if(c&1)c++;					
                                 tr-=c>>1;
 
                                 ti=(wr*(fi[j]>>shift))>>(14-shift);		
-                                if(ti&1)ti++; ti>>=1;
+                                if(ti&1)ti++;
+                                ti>>=1;
                                 c=(wi*(fr[j]>>shift))>>(14-shift);
                                 if(c&1)c++;					
                                 ti+=c>>1;

@@ -2069,7 +2069,8 @@ void LoadFFTbuffer(u16 Row,u8 buffer){
                         if(fi[fftx+1]>173)TraceShadow(174,fi[fftx+1]+2,buffer);
                         if(fi[fftx-1]>173)TraceShadow(174,fi[fftx-1]+2,buffer);
 
-                        for(i=Y_BASE+1;i<val; i++) LCD_Buffer[buffer][i] = GRN; if(val>173)LCD_Buffer[buffer][i]=BLACK;     
+                        for(i=Y_BASE+1;i<val; i++) LCD_Buffer[buffer][i] = GRN;
+                        if(val>173) LCD_Buffer[buffer][i]=BLACK;     
                         if((FlagMeter>0)||((DownConvertMode)&&(FFTt1Mode==0))){
   			  if ((fftx == imax - 4) || (fftx == imax + 4)) {
 				for (i=PeakFreq - 1; i<PeakFreq+1; i++) {
@@ -2208,8 +2209,10 @@ u8 j;
 */
 
      if(DownConvertMode==0){ 
-       for(j=0;j<5;j++)Nfreq[j]=NFreqStr[j]; Nfreq[3+index+index]=0;            
-       for(j=0;j<2;j++)Nsuffix[j]=NFreqStr[j+(4+index+suffix)]; Nsuffix[2]=0;      
+       for(j=0;j<5;j++)Nfreq[j]=NFreqStr[j];
+       Nfreq[3+index+index]=0;            
+       for(j=0;j<2;j++)Nsuffix[j]=NFreqStr[j+(4+index+suffix)];
+       Nsuffix[2]=0;      
      }
 
 }

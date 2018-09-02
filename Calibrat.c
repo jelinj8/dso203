@@ -180,7 +180,8 @@ void Calibrat(u8 Channel)
       if(Channel == TRACK2){								//above the signal to the noise in the the steps 
         Offset=((V_max-(b_Avg/4096))+(V_min-(b_Avg/4096)));                             //below the signal
       }
-      if(Offset<-2)Offset=-2; if(Offset>2)Offset=2; Offset+=2;				//limit to +/- 2 steps
+      if(Offset<-2) { Offset=-2; } if(Offset>2) { Offset=2; }				//limit to +/- 2 steps
+      Offset+=2;									//convert to array index
       Print_Str( 3*8, 208, 0x0305, PRN,(char*)CenterStep);				//31 chars		
       Print_Str( 36*8, 208, 0x0405, PRN,(char*)CenterStr[Offset]);			//11 chars    			
     }else{
